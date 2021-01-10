@@ -17,8 +17,4 @@ module ErrorMessages
   def self.wrongScore
     p "The selected file has the wrong format for the score, please remember that the score should be a number between 0 and 10 or have the F value on it"
   end
-
-  def self.wrongFrames
-    p "The frames of the score are wrong. It should be either 10 or 11 frames, no more no less"
-  end
 end
