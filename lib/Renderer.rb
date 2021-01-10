@@ -30,6 +30,8 @@ module Renderer
     i = 0
     frame = 1
 
+    last_spare = false
+
     while i < score.length
       # The following conditionals handle the score until frame 10
       if frame < 10
@@ -81,9 +83,18 @@ module Renderer
         elsif foulParser(score[i]) + foulParser(score[i + 1]) == 10 && i < score.length - 1
           string_pinfalls += score[i] + "  /"
 
-          total += foulParser(score[i]) + foulParser(score[i + 1]) + foulParser(score[i + 2])
+          total += foulParser(score[i]) + foulParser(score[i + 1])
+
+          last_spare = true if i + 2 == score.length - 1
 
           i += 2
+        # Recording of the last value if there was a spare in Frame 10
+        elsif last_spare
+          string_pinfalls += "  " + score[i]
+
+          total += score[i].to_i
+
+          break
         # Normal scoring conditional
         else
           string_pinfalls += score[i] + "   " + score[i + 1]
