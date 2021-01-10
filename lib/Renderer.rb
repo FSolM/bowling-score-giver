@@ -12,7 +12,7 @@ module Renderer
   end
 
   def self.frame
-    return "Frame      1      2      3      4      5      6      7      8      9     10"
+    "Frame      1      2      3      4      5      6      7      8      9     10"
   end
 
   ##
@@ -108,13 +108,13 @@ module Renderer
 
     string_total += total.to_s
     
-    return string_pinfalls + "\n" + string_total
+    string_pinfalls + "\n" + string_total
   end
 
   ##
   # The #foulParser checks if the current value of score has the F value, if it does, it returns 0, if it doens't, it
   # returns the param value as a integer
   def self.foulParser(value)
-    return value == "F" ? 0 : value.to_i
+    value == "F" ? 0 : value.to_i
   end
 end
