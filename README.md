@@ -2,6 +2,8 @@
 
 ## A Ruby command-line application that displays the score of a bowling match given a file input
 
+*My creativity dried while thinking about this project's name*
+
 This console application displays a stylized (to a certain extend) bowling score given a file input.
 
 To run the application, you need to first run the `main.rb` file in the root of this repo. It can be done with the command:
